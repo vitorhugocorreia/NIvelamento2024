@@ -1,34 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shadows+Into+Light&display=swap');
-body{
-    background-color: #1f205e;
-    font-family: Amatic SC ;
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root {
+    --cor-de-fundo: #1f205e;
+    --verde: #3bd2c3;
+    --branco: #FFFFFF;
+    --botao-ativo: #6413bb;
+    --botao-inativo: #3bd2c3;
+    --texto-fundo: #578ebb;
 }
-h1{
-  background-image: linear-gradient(to bottom, #6413bb, #578ebb, #3bd2c3);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #1f205e;;
-  font-weight:bold;
-  font-size: 60px;
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
 }
-.metas{
-    color: #3bd2c3;
-    font-weight: bold;
-    font-size: 50px;
+
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
-.importancias{
-    color: #6413bb;
-    font-weight: bold;
-    font-size: 40px;
+
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
 }
-.prazos{
-    color: #578ebb;
-    font-weight: bold;
-    font-size: 40px;
+
+.titulo-principal span {
+    color: var(--verde);
 }
-h3{
-    color: #000000;
-    font-weight: lighter;
-    font-size: 30px;
+
+
+.botao {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
 }
+
+.botoes {
+    display: block;
+}
+
+.botao.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 40px 0 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
+
+.abas-textos {
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo {
+    display: block;
+}
+
+.aba-conteudo {
+    display: none;
+}
+
+.aba-conteudo-titulo-principal {
+    font-size: 28px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario {
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contador-digito {
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-numero {
+    font-size: 80px;
+    margin: 0;
+
+}
+
+.contador-digito-texto {
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+
+}  
